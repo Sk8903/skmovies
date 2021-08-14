@@ -57,19 +57,16 @@ async def about_cb(c, m):
     # about text
     about_text = f"""--**My Details:**--
 
-🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
+🤖 MY NAME: {bot.mention(style='md')}
     
-📝 𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞: [Python 3](https://www.python.org/)
-
-🧰 𝐅𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤: [Pyrogram](https://github.com/pyrogram/pyrogram)
+🔥 LANGUAGE: [PYTHON](https://www.python.org/)
 
 😍 MY GOD : {owner.mention(style='md')}
 
 ⚡ CHANNEL: [SK TAMIL MOVIES](https://t.me/Sk_Tamil_Movies)
 
-💭 CONTACT ME: [Ns BOT SUPPORT](https://t.me/)
+💭 CONTACT ME OR PROMOTION: [SK MOVIES OWNER](https://t.me/Sk_Tv_Movies_Bot)
 
-🌐𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞: [Press Me 🥰](https://github.com/Ns-Bots/TG-File-Store)
 """
 
     # creating buttons
