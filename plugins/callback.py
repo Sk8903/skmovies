@@ -28,7 +28,6 @@ async def help_cb(c, m):
         [
             InlineKeyboardButton('HOME 💖', callback_data='home'),
             InlineKeyboardButton('ABOUT 😍', callback_data='about')
-            InlineKeyboardButton('YOUR WEBSITE 🌐', callback_data='your website')
         ],
         [
             InlineKeyboardButton('CLOSE ❌', callback_data_='close')
