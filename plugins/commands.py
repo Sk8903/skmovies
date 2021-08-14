@@ -28,22 +28,22 @@ async def start(c, m, cb=False):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
 
-💡 ** I am Telegram File Store Bot**
-
-`You can store your Telegram Media for permanent Link!`
-
-
-**👲 Maintained By:** {owner.mention(style='md')}
+⚡ ** I was created for the SK Tamil Movies channel**
+`⚡ You should only use me to watch Tamil Movies, Tamil Web Series, Tamil Dubbed Movies ⚡`
+**⭐ Creator of this Bot ⭐** {owner.mention(style='md')}
 """
 
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}"),
-            InlineKeyboardButton('Help 💡', callback_data="help")
+            InlineKeyboardButton('MY GOD 🔥', url=f"https://t.me/{owner_username}"),
+            InlineKeyboardButton('HELP ‼️', callback_data="help")
         ],
         [
-            InlineKeyboardButton('About 📕', callback_data="about")
+            InlineKeyboardButton('ABOUT 😍', callback_data="about")
+        ],
+        [   
+            InlineKeyboardButton('YOUR WEBSITE 🌐', url=f"https://www.sktamilmovies.ga")
         ]
     ]
 
