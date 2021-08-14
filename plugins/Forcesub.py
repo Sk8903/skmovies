@@ -14,16 +14,16 @@ async def forcesub(c, m):
         try:
             user = await c.get_chat_member(UPDATE_CHANNEL, m.from_user.id)
             if user.status == "kicked":
-               await m.reply_text("**Hey you are banned 😜**", quote=True)
+               await m.reply_text("**Hey {m.from_user.mention(style='md')} You Banned 🚫 By Admin You can no longer use me", quote=True)
                return
         except UserNotParticipant:
-            buttons = [[InlineKeyboardButton(text='Updates Channel 🔖', url=f"https://t.me/{UPDATE_CHANNEL}")]]
+            buttons = [[InlineKeyboardButton(text='🎥 Your Movies Channel 🎥', url=f"https://t.me/{UPDATE_CHANNEL}")]]
             if m.text:
                 if (len(m.text.split(' ')) > 1) & ('start' in m.text):
                     chat_id, msg_id = m.text.split(' ')[1].split('_')
                     buttons.append([InlineKeyboardButton('🔄 Refresh', callback_data=f'refresh+{chat_id}+{msg_id}')])
             await m.reply_text(
-                f"Hey {m.from_user.mention(style='md')} you need join My updates channel in order to use me 😉\n\n"
+                f"Hey {m.from_user.mention(style='md')} you need join My Movie channel in order to use me 😉\n\n"
                 "__Press the Following Button to join Now 👇__",
                 reply_markup=InlineKeyboardMarkup(buttons),
                 quote=True
@@ -44,7 +44,7 @@ async def refresh_cb(c, m):
             user = await c.get_chat_member(UPDATE_CHANNEL, m.from_user.id)
             if user.status == "kicked":
                try:
-                   await m.message.edit("**Hey you are banned 😜**")
+                   await m.message.edit("**Hey {m.from_user.mention(style='md')} You Banned 🚫 By Admin You can no longer use me**")
                except:
                    pass
                return
@@ -60,7 +60,7 @@ async def refresh_cb(c, m):
     msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
 
     if msg.empty:
-        return await m.reply_text(f"🥴 Sorry bro your file was missing\n\nPlease contact my owner 👉 {owner.mention(style='md')}")
+        return await m.reply_text(f"🥴 Sorry bro This Movie was missing\n\nPlease contact my owner 👉 {owner.mention(style='md')}")
 
     caption = msg.caption.markdown
 
