@@ -32,11 +32,13 @@ async def start(c, m, cb=False):
     buttons = [
         [
             InlineKeyboardButton('MY GOD 🔥', url=f"https://t.me/{owner_username}"),
-            InlineKeyboardButton('YOUR WEBSITE 🌐', url=f"https://www.sktamilmovies.ga"),
             InlineKeyboardButton('HELP ‼️', callback_data="help")
         ],
         [
             InlineKeyboardButton('ABOUT 😍', callback_data="about")
+        ],
+        [   
+            InlineKeyboardButton('YOUR WEBSITE 🌐', url=f"https://www.sktamilmovies.ga")
         ]
     ]
 
